@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   resources :songs
   devise_for :users
   
-  root "home#index"
+  root "songs#index"
 end
