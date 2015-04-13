@@ -14,11 +14,21 @@
         <li><%= link_to "New Song", new_song_path %></li>
       </ul>
     </nav>
-  </header>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <%= yield %>
+    <div class='login'>
+      <% if current_user %>
+      <%= current_user.email %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to "Sign In", new_user_session_path %>
+      <%= link_to "Register", new_user_registration_path %>
+      <% end %>
+      
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-</body>
-</html>
+    <%= yield %>
+
+  </body>
+  </html>
