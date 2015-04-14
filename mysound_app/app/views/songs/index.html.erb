@@ -17,7 +17,7 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.song_name %></td>
-        <td><%= song.user_id %></td>
+        <td><%= song.user_id.try('email') %></td>
         <td><%= song.track %> </td>
         <td><%= image_tag song.song_cover %></td>
         <td><%= link_to 'Show', song %></td>

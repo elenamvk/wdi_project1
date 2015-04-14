@@ -30,7 +30,4 @@ private
   def user_params
     params.require(:user).permit(:role, :username, :dob, :about, :icon)
   end
-
-
-
 end
