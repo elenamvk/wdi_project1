@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-  <body>
+
+</head>
+
+<body>
 
   <header>
-    <nav>
-      <ul>
-        <li><%= link_to "Songs", songs_path %></li>
-        <li><%= link_to "New Song", new_song_path %></li>
-      </ul>
-    </nav>
 
     <div class='login'>
       <% if current_user %>
-      <%= current_user.email %>
+      <%= current_user.email %> 
+      <%= link_to "edit", edit_user_registration_path(current_user) %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <% else %>
       <%= link_to "Sign In", new_user_session_path %>
       <%= link_to "Register", new_user_registration_path %>
       <% end %>
+
+      <nav>
+        <ul>
+          <li><%= link_to "Songs", songs_path %></li>
+          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to "New Song", new_song_path %></li>
+        </ul>
+      </nav>
     </div>
     
-    </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  </header>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 
-    <%= yield %>
+  <%= yield %>
 
-  </body>
+</body>
 </html>

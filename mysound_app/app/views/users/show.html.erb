@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
@@ -12,7 +17,7 @@
 
 <p>
   <strong>Icon:</strong>
-  <%= @user.icon %>
+  <%= image_tag @user.icon %>
 </p>
 
 <p>

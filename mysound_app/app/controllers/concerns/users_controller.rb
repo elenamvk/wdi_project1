@@ -13,8 +13,12 @@ def show
   @user = User.find(params[:id])
 end
 
-#create a provate method that will show the possibilities ONLY to the admin
+#create a private method that will show the possibilities ONLY to the admin
 #if role == admin then...
+#or
+#if current_user.admin?
+  # do something
+#end
 
 private
   # Use callbacks to share common setup or constraints between actions.
@@ -26,5 +30,7 @@ private
   def user_params
     params.require(:user).permit(:role, :username, :dob, :about, :icon)
   end
+
+
 
 end

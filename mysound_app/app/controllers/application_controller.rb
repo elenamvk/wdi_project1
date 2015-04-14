@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
     end
   end 
 
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:account_update) do |u| 
+      u.permit(:email, :password, :password_confirmation, :username, :dob, :about, :icon)
+    end
+  end 
+
+   
 end
