@@ -21,5 +21,11 @@
   <%= @song.user_id %>
 </p>
 
+<%= render partial: 'comments/form', locals: { commentable: @song } %>
+
+<ul>
+ <%= render @comments %>
+</ul>
+
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
