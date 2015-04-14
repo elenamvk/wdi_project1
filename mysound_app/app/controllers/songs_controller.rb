@@ -12,6 +12,7 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    @song = Song.find(params[:id])
   end
 
   # GET /songs/new
@@ -43,6 +44,7 @@ class SongsController < ApplicationController
   # PATCH/PUT /songs/1
   # PATCH/PUT /songs/1.json
   def update
+    @song = Song.find(params[:id])
     respond_to do |format|
       if @song.update(song_params)
         format.html { redirect_to @song, notice: 'Song was successfully updated.' }
@@ -57,6 +59,7 @@ class SongsController < ApplicationController
   # DELETE /songs/1
   # DELETE /songs/1.json
   def destroy
+    @song = Song.find(params[:id])
     @song.destroy
     respond_to do |format|
       format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
@@ -74,4 +77,4 @@ class SongsController < ApplicationController
     def song_params
       params.require(:song).permit(:song_name, :user_id, :track, :song_cover)
     end
-end
+  end

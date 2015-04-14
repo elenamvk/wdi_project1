@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :songs,  dependent: :destroy
-  has_many :comments, through: :song
   mount_uploader :icon, IconUploader
          
 end
