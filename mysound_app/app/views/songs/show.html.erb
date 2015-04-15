@@ -13,12 +13,12 @@
 
 <p>
   <strong>Cover:</strong>
-  <%= image_tag @song.song_cover %>
+  <%= image_tag @song.song_cover, :class => "songcover" %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @song.user_id %>
+  <%= @song.user.username %>
 </p>
 
 <%= render partial: 'comments/form', locals: { commentable: @song } %>

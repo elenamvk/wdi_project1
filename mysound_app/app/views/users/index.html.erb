@@ -23,7 +23,7 @@
         <td><%= user.email %></td>
         <td><%= user.username %></td>
         <td><%= user.role %></td>
-        <td><%= image_tag user.icon %></td>
+        <td><%= image_tag user.icon, :class => "usericon"  %></td>
         <td><%= user.dob %></td>
         <td><%= user.about %></td>
         <td><%= link_to 'Show', user %></td>

@@ -29,9 +29,9 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    @song = Song.new(song_params)
+    @song = current_user.songs.new(song_params)
 
-
+  
 
     respond_to do |format|
       if @song.save
