@@ -16,26 +16,31 @@
 
  */
 
+ .top-bar {
+  background: #007095;
+}
+
 .usericon {
   width: 100px;
   height: 100px;
-  border: 1px solid #6B1229;
+  border: 1px solid #007095;
 }
 
 .usericonshow {
   width: 200px;
   height: 200px;
-  border: 1px solid #6B1229;
+  border: 1px solid #007095;
 }
 
 .songcover {
   height: 200px;
-  border: 1px solid #6B1229;
+  width: 200px;
+  border: 1px solid #007095;
 }
 
 .songcovershow {
   height: 500px;
-  border: 1px solid #6B1229;
+  border: 1px solid #007095;
 }
 
 .top-bar-section nav ul li {
@@ -49,7 +54,23 @@
 #currentuser img {
   max-width: 45px;
   max-height: 45px;
-  
   padding-top: 2px;
-
 }
+
+main {
+  max-width: 700px;
+  margin: auto;
+}
+
+.alert {
+  color: white;
+  background: red;
+  text-align: center; 
+}
+
+#notice {
+  color: white;
+  background: green;
+  text-align: center; 
+}
+

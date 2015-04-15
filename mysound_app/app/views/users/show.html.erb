@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <strong>Icon:</strong>
+  <%= image_tag @user.icon, :class => "usericonshow" %>
 </p>
 
 <p>
@@ -16,21 +16,11 @@
 </p>
 
 <p>
-  <strong>Icon:</strong>
-  <%= image_tag @user.icon, :class => "usericonshow" %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @song.try("user_id") %>
-</p>
-
-<p>
   <strong>Songs:</strong>
   <ul>
     <% @user.songs.each do |s| %>
-      <li><%= link_to "#{s.song_name}", s %></li>
-      <li><%= image_tag s.song_cover %></li>
+    <li><%= link_to "#{s.song_name}", s %></li>
+    <li><%= image_tag s.song_cover, :class => "songcover"%></li>
     <% end %>
   </ul>
 

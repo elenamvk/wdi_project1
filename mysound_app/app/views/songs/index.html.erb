@@ -7,7 +7,6 @@
     <tr>
       <th>Title</th>
       <th>User</th>
-      <th>Track</th>
       <th>Cover</th>
       <th colspan="3"></th>
     </tr>
@@ -16,11 +15,9 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
-        <td><%= song.song_name %></td>
+        <td><%= link_to song.song_name, song %></td>
         <td><%= song.user.username %></td>
-        <td><%= song.track %> </td>
-        <td><%= image_tag song.song_cover, :class => "songcover" %></td>
-        <td><%= link_to 'Show', song %></td>
+        <td><%= image_tag song.song_cover, :class => "songcover"%></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
         <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
