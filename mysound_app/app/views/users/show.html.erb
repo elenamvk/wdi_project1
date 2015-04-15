@@ -25,4 +25,17 @@
   <%= @song.try("user_id") %>
 </p>
 
+<p>
+  <strong>Songs:</strong>
+  <ul>
+    <% @user.songs.each do |s| %>
+      <li><%= link_to "#{s.song_name}", s %></li>
+      <li><%= image_tag s.song_cover %></li>
+    <% end %>
+  </ul>
+
+</p>
+
+
+
 <%= link_to 'Back', users_path %>

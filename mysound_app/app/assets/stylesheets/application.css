@@ -29,6 +29,27 @@
 }
 
 .songcover {
+  height: 200px;
+  border: 1px solid #6B1229;
+}
+
+.songcovershow {
   height: 500px;
   border: 1px solid #6B1229;
+}
+
+.top-bar-section nav ul li {
+
+}
+
+#currentuser {
+  color: white;
+}
+
+#currentuser img {
+  max-width: 45px;
+  max-height: 45px;
+  
+  padding-top: 2px;
+
 }
