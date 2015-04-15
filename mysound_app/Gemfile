@@ -5,6 +5,12 @@ gem 'carrierwave', '0.10.0'
 gem 'foundation-rails'
 gem 'acts_as_commentable'
 gem 'rmagick'
+group :assets do
+  gem 'sass-rails', "  ~> x.x.x"
+  gem 'coffee-rails', "~> x.x.x"
+  gem 'uglifier'
+  gem 'foundation-icons-sass-rails'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

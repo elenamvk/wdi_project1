@@ -19,24 +19,24 @@
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><%= link_to "Home", root_path %></h1>
+          <h1><%= link_to " Home", root_path, :class => "fi-star" %></h1>
         </li>
       </ul>
       <section class="top-bar-section">
         <ul class="middle">
-          <li><%= link_to "Feed", songs_path %></li>
-          <li><%= link_to "Users", users_path %></li>
-          <li><%= link_to "New Song", new_song_path %></li>
+          <li><%= link_to " songs", songs_path, :class => "fi-list-thumbnails" %></li>
+          <li><%= link_to " users", users_path, :class => "fi-torsos-all" %></li>
+          <li><%= link_to " new song", new_song_path, :class => "fi-play-circle" %></li>
         </ul>
         <ul class="right">
           <li id="currentuser"><% if current_user %>
             <%= image_tag current_user.icon %></li> 
             <li><%= link_to current_user.username %></li>
-            <li><%= link_to "Edit", edit_user_registration_path(current_user) %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <li ><%= link_to " edit", edit_user_registration_path(current_user), :class => "fi-crown" %></li>
+            <li><%= link_to " logout", destroy_user_session_path, method: :delete, :class => "fi-power" %></li>
             <% else %>
-            <li><%= link_to "Sign In", new_user_session_path %></li>
-            <li><%= link_to "Register", new_user_registration_path %></li>
+            <li></i><%= link_to " login", new_user_session_path, :class => "fi-key" %></li>
+            <li><%= link_to " register", new_user_registration_path, :class => "fi-clipboard-pencil"%></li>
             <% end %>
           </ul>
         </section>
@@ -47,5 +47,10 @@
       <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
+    
+    <footer>
+      Listen to handcrafted music. Share your own tracks online. ©Mysound Inc. 2015
+    </footer>
+
   </body>
   </html>

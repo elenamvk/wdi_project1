@@ -27,5 +27,5 @@
  <%= render partial: 'comments/comment', collection: @comments , locals: { commentable: @song } %>
 </ul>
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+<%= link_to 'Edit', edit_song_path(@song), :class => "editback" %> |
+<%= link_to 'Back', songs_path, :class => "editback" %>
