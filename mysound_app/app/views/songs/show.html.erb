@@ -24,7 +24,7 @@
 <%= render partial: 'comments/form', locals: { commentable: @song } %>
 
 <ul>
- <%= render @comments %>
+ <%= render partial: 'comments/comment', collection: @comments , locals: { commentable: @song } %>
 </ul>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
