@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hullo, <%= "#{current_user.username}" %>! </h1>
+<% if current_user %>
+<h1>Welcome back, <%= link_to "#{current_user.username}", current_user %>!</h1>
+<% else %>
+<h1>Hello stranger, wanna <%= link_to " register", new_user_registration_path%> <i class="fi-heart"></i> ?</h1>
+<% end %>
+
+
+
 

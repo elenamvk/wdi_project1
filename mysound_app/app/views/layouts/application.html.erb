@@ -29,9 +29,10 @@
           <li><%= link_to " new song", new_song_path, :class => "fi-play-circle" %></li>
         </ul>
         <ul class="right">
-          <li id="currentuser"><% if current_user %>
+          <li id="currentuser">
+          <% if current_user %>
             <%= image_tag current_user.icon %></li> 
-            <li><%= link_to current_user.username %></li>
+            <li><%= link_to current_user.username, current_user %></li>
             <li ><%= link_to " edit", edit_user_registration_path(current_user), :class => "fi-crown" %></li>
             <li><%= link_to " logout", destroy_user_session_path, method: :delete, :class => "fi-power" %></li>
             <% else %>
