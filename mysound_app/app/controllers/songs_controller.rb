@@ -62,6 +62,8 @@ class SongsController < ApplicationController
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
+    @song.create_activity :destroy, owner: current_user
+    redirect_to @song, notice: "song was destroyed"
     respond_to do |format|
       format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
       format.json { head :no_content }

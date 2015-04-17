@@ -1,31 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Song name:</strong>
+<p class="blackline">
+  <strong >Song name:</strong>
   <%= @song.try('song_name') %>
 </p>
 
-<p>
-  <strong>Track:</strong>
-  
+<div class="panel clearfix">
+
+<p id="player">
+  <%= image_tag @song.song_cover, :class => "songcovershow" %>
   <audio src="<%= @song.track.url %>" controls></audio>
 </p>
-
-<p>
-  <strong>Cover:</strong>
-  <%= image_tag @song.song_cover, :class => "songcover" %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @song.user.username %>
-</p>
-
+</div>
+<p class="formcomment">
 <%= render partial: 'comments/form', locals: { commentable: @song } %>
+</p>
+
+
+
+<p>
+<strong>Uploaded by:</strong>
+<%= @song.user.username %>
+</p>
 
 <ul>
  <%= render partial: 'comments/comment', collection: @comments , locals: { commentable: @song } %>
 </ul>
 
-<%= link_to 'Edit', edit_song_path(@song), :class => "editback" %> |
-<%= link_to 'Back', songs_path, :class => "editback" %>
+
+
+
+
+<%= link_to 'Edit', edit_song_path(@song), :class => "editback" %>

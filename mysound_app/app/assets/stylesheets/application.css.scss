@@ -41,12 +41,8 @@
 }
 
 .songcovershow {
-  height: 500px;
+  width: 300px;
   border: 1px solid #007095;
-}
-
-.top-bar-section nav ul li {
-
 }
 
 #currentuser {
@@ -91,6 +87,85 @@ footer {
 
 .editback {
   font-style: italic;
-  padding: 10px;
+  padding: 5px;
   background: #eee;
+}
+
+nav.usersongs li {
+display: inline;
+}
+
+#about {
+  max-width: 400px;
+}
+
+.showusername {
+  font-size:30px;
+}
+
+.newsong {
+  border-left: 3px solid gold;
+  padding-left: 2px;
+}
+
+.tableitems {
+width: 400px;
+margin: 30px auto;
+max-width: 400px;
+padding: auto;
+text-align: center;
+}
+
+.blackline {
+  border-bottom: solid #122c4b 1px;
+}
+
+.title {
+  padding: auto;
+  font-size: 17px; 
+
+}
+
+.button .big {
+  text-align: center;
+}
+
+.deleteaccount {
+  border: dotted red 2px;
+  text-align: center;
+  margin: auto;
+}
+
+.actions {
+  text-align: center;
+}
+
+#player {
+max-width:300px;
+margin: auto;
+text-align: center;
+}
+
+p.right {
+  margin: auto;
+  text-align: center;
+}
+
+.commentmade {
+  width: 500px; 
+  padding: auto;
+}
+
+.comments {
+  margin: auto;
+}
+
+.formcomment{
+  width: 675px;
+  margin: auto;
+  text-align: center; 
+}
+
+h1, .top-bar, .showusername {
+  font-family: 'Pacifico', cursive;
 }

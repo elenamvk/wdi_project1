@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2  class="blackline">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
@@ -19,10 +19,12 @@
   <%= f.text_field :about %>
 </div>
 
-<div class="field">
-  <%= f.label :icon %><br />
-  <%= f.file_field :icon %>
-</div>
+<fieldset>
+  <div class="field">
+    <%= f.label :icon %><br />
+    <%= f.file_field :icon %>
+  </div>
+</fieldset>
 
 <div class="field">
   <%= f.label :email %><br />

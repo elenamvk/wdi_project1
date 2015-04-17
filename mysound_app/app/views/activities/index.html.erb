@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<% if current_user %>
+<h1>Welcome back, <%= link_to "#{current_user.username}", current_user %>!</h1>
+<% else %>
+<h1>Hello stranger, wanna <%= link_to " register", new_user_registration_path%> <i class="fi-star"></i> ?</h1>
+<h4>Upload your song, comment others', get your name going around! </h4>
+<% end %>
+
+<div class="tableitems">
+  <h3 class="blackline">Most recent songs:</h3>
+
+<% if @activities.length > 0 %>
+  <% @activities.each do |a| %>
+    <%  if a.trackable %>
+      <table class="tableitems">
+        <th><i class="fi-play"></i></th>
+        <th><%= link_to image_tag("#{a.trackable.song_cover.thumb.url}", :class => "newsong"), a.trackable%></th>
+        <td>"<%= link_to "#{a.trackable.song_name}", a.trackable %>"</td>
+      </table>
+    <% end %>
+  <% end %>
+<% else %>
+  <h1>nope</h1>
+<% end %>
+
+</div>

@@ -1,26 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1 class="blackline">Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      
-      <th>Username</th>
-      <th>Icon</th>
-
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-    <tr>
-      <td><%= link_to user.username, user %></td>
-      <td><%= image_tag user.icon, :class => "usericon"  %></td>
-    </tr>
-    <% end %>
-  </tbody>
+<% @users.each do |user| %>
+<table class="tableitems" >      
+  <td class="left"><%= link_to user.username, user %></td>
+  <td class="right"><%= link_to image_tag("#{user.icon}", :class => "usericon")  %></td>
 </table>
-
+<% end %>
 <br>

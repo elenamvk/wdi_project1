@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Songs</h1>
+<h1 class="blackline">Songs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th>Cover</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= link_to song.song_name, song %></td>
-        <td><%= link_to song.user.username, song.user %></td>
-        <td><%= image_tag song.song_cover, :class => "songcover"%></td>
-        <td><%= link_to 'Edit', edit_song_path(song), :class => "editback" %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, :class => "editback" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul  class="small-block-grid-3">
+  <% @songs.each do |song| %>
 
-<br>
+  
+  <li><%= link_to song.user.username, song.user %>
+    <br>
+    <strong><%= link_to song.song_name, song %></strong>
+    <br>
+    <%= link_to image_tag("#{song.song_cover}", :class => "songcover")%>
+    <br>
+    <br>
+    <%= link_to 'Edit', edit_song_path(song), :class => "editback" %></td> | <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, :class => "editback" %>
+  </li>
+
+
+
+  <% end %>
+</ul>
 

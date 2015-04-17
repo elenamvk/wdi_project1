@@ -1,36 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Icon:</strong>
-  <%= image_tag @user.icon, :class => "usericonshow" %>
-</p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+  <strong class="showusername"><%= @user.username %></strong>
 </p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.email %>
-</p>
+<div class="panel clearfix">
+  <p class="left">
+    <%= image_tag @user.icon, :class => "usericonshow" %>
+  </p>
 
-<p>
+<p id="about" class="right">
   <strong>About:</strong>
   <%= @user.about %>
 </p>
 
+</div>
+
 <p>
-  <strong>Songs:</strong>
-  <ul>
-    <% @user.songs.each do |s| %>
-    <li><%= link_to "#{s.song_name}", s %></li>
-    <li><%= image_tag s.song_cover, :class => "songcover"%></li>
-    <% end %>
-  </ul>
+  <strong class="blackline">Songs by <%= @user.username %>: </strong>
+  <nav>
+    <ul  class="small-block-grid-3">
+      <% @user.songs.each do |s| %>
+      <li><%= link_to "#{s.song_name}", s %> 
+        <br>
+        <%= link_to image_tag("#{s.song_cover}", :class => "songcover"), s %></li>
+        <% end %>
+      </ul>
+    </nav>
 
-</p>
+  </p>
 
 
 
-<%= link_to 'Back', users_path, :class => "editback" %>
+  <%= link_to 'Back', users_path, :class => "editback" %>
