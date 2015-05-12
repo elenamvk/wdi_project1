@@ -1,4 +1,4 @@
-#1st PROJECT: :musical_score: :sparkles: Soundcloud app :music_keyboard: :sparkles:
+#1st PROJECT: :musical_score: :sparkles: Soundcloud app :musical_keyboard: :sparkles:
 
 ##Preparation:
 
