@@ -1,5 +1,7 @@
 #1st PROJECT: :musical_score: :sparkles: Soundcloud app :musical_keyboard: :sparkles:
 
+[![Code Climate](https://codeclimate.com/github/elenamvk/wdi_project1/badges/gpa.svg)](https://codeclimate.com/github/elenamvk/wdi_project1)
+
 ##Preparation:
 
 ###Scope:
